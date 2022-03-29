@@ -23,8 +23,11 @@ int main()
                 break;
             j--;
         }
-        arr[j + 1] = key;
-        write++;
+        if(i != j+1)
+        {
+            arr[j + 1] = key;
+            write++;
+        }
     }
     for(int i=0;i<size;i++)
         cout<<arr[i]<<" ";
