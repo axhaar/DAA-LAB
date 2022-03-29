@@ -13,11 +13,11 @@ int main()
         int j = i - 1;
         while(j>=0)
         {
+            comparisons++;
             if(key < arr[j])
             {
                 arr[j+1] = arr[j];
                 write++;
-                comparisons++;
             }
             else
                 break;
