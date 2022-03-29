@@ -28,6 +28,6 @@ int main()
     }
     for(int i=0;i<size;i++)
         cout<<arr[i]<<" ";
-    cout<<"\nTotal Comparisons = "<<comparisons<<"\nTotal Write Operations = "<<write++<<endl;
+    cout<<"\nTotal Comparisons = "<<comparisons<<"\nTotal Write Operations = "<<write<<endl;
     return 0;
 }
