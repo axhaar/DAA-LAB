@@ -1,0 +1,18 @@
+implement quick sort and print comparisons
+implement randomize quick sort and print comparisons
+
+given an unsorted array print total number of inversions in that array (O(n) = nlogn)
+
+given an unsorted array print the medium of that array 	O(n)
+
+implement counting sort
+
+given a character array, print the character with max recurrency
+
+given two sorted arrays find union of those arrays, find intersection of those arrays 	O(n)
+
+given an unsorted array find the n/3th largest element of that array		O(n)
+
+given an unsorted array find the kth largest element of that array
+
+given an array and print the element that comes n/2 times more  	O(n)
