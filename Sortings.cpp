@@ -28,7 +28,7 @@ void merge(int a[], int low, int mid, int high)
     for(;i<=high;i++)
         b[k++] = a[i];
     for(;j<=high;j++)
-        b[k++] = a[i];
+        b[k++] = a[j];
     for(i=low;i<=high;i++)
         a[i] = b[i];
 }
