@@ -136,6 +136,8 @@ int main()
         cout<<arr[i]<<" ";
     cout<<endl;
     
+    // Print(A, n, "\t\tA");
+    
     //MergeSort(arr, 0, n-1);
     QuickSort(arr, 0, n);
     //BubbleSort(arr,n);
@@ -146,6 +148,8 @@ int main()
     for(int i=0;i<n;i++)
         cout<<arr[i]<<" ";                      //3 5 7 9 10 11 12 13 16 24
     cout<<endl;
+    
+    // Print(A, n, " Sorted A");
     
     return 0;
 }
