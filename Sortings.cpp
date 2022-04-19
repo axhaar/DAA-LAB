@@ -25,7 +25,7 @@ void merge(int a[], int low, int mid, int high)
         else
             b[k++] = a[j++];
     }
-    for(;i<=high;i++)
+    for(;i<=mid;i++)
         b[k++] = a[i];
     for(;j<=high;j++)
         b[k++] = a[j];
@@ -138,8 +138,8 @@ int main()
     
     // Print(A, n, "\t\tA");
     
-    //MergeSort(arr, 0, n-1);
-    QuickSort(arr, 0, n);
+    MergeSort(arr, 0, n-1);
+    //QuickSort(arr, 0, n);
     //BubbleSort(arr,n);
     //InsertionSort(arr,n);
     //SelectionSort(arr,n);
