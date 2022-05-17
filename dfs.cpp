@@ -1,58 +1,39 @@
-// DFS algorithm in C++
-
-#include <iostream>
-#include <list>
+#include<bits/stdc++.h>
 using namespace std;
 
-class Graph 
-{
-  int numVertices;
-  list<int> *adjLists;
-  bool *visited;
-
-   public:
-  Graph(int V);
-  void addEdge(int src, int dest);
-  void DFS(int vertex);
-};
-
-// Initialize graph
-Graph::Graph(int vertices) 
-{
-  numVertices = vertices;
-  adjLists = new list<int>[vertices];
-  visited = new bool[vertices];
+void addEdge(vector<int> adj[], int u, int v){
+	adj[u].push_back(v);
+	adj[v].push_back(u);
 }
 
-// Add edges
-void Graph::addEdge(int src, int dest) 
-{
-  adjLists[src].push_front(dest);
+
+void dfs(vector<int> adj[], int u, bool visited[]){
+	visited[u] = true;
+	cout<<u<<" ";
+	
+	vector<int> :: iterator it;
+	
+	for(it = adj[u].begin(); it != adj[u].end(); it++){
+		if(!visited[*it])
+			dfs(adj,*it,visited);
+	}	
 }
 
-// DFS algorithm
-void Graph::DFS(int vertex) 
-{
-  visited[vertex] = true;
-  list<int> adjList = adjLists[vertex];
-
-  cout << vertex << " ";
-
-  list<int>::iterator i;
-  for (i = adjList.begin(); i != adjList.end(); ++i)
-    if (!visited[*i])
-      DFS(*i);
-}
-
-int main() 
-{
-  Graph g(4);
-  g.addEdge(0, 1);
-  g.addEdge(0, 2);
-  g.addEdge(1, 2);
-  g.addEdge(2, 3);
-
-  g.DFS(2);
-
-  return 0;
+int main(){
+	int n=5;
+	
+	vector<int> adj[n];
+	addEdge(adj,0, 1);    
+    addEdge(adj,0, 2);    
+    addEdge(adj,0, 3);    
+    addEdge(adj,1, 3);    
+    addEdge(adj,2, 4);
+     
+	bool visited[n] = {false};
+	
+	for(int i=0; i<n; i++)
+  {
+		if(!visited[i])
+			dfs(adj,i,visited);
+	}
 }
