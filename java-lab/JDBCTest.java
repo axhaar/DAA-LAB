@@ -29,7 +29,14 @@ class JDBCTest
 		try
 		{
 			Statement st = con.createStatement();
-			st.executeUpdate("insert into emp (id,name)values(10,'Moosewala')");
+			//st.executeUpdate("insert into emp (id,name)values(10,'Moosewala')");
+			
+			ResultSet rs = st.executeQuery("select * from emp");
+			while(rs.next())
+			{
+				System.out.print(rs.getInt(1));
+				System.out.println(rs.getString(2));
+			}
 		}
 		catch(Exception e)
 		{
